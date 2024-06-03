@@ -1,0 +1,9 @@
+//사이트의 공통 스타일을 정의합니다.
+
+//style(button, radio, checkbox, card, list
+
+//header
+#header {
+    @include flexSpaceBetween;
+}
+//footer
