@@ -21,8 +21,10 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script defer src="./assets/js/comm.js"></script>
     </head>
     <body>
@@ -33,7 +35,8 @@
         </div>
         <div id="wrap">
             <!-- HEADER -->
-            <header id="header">
+            <!-- 60px 스크롤시 .active 추가 -->
+            <header id="header" class="active">
                 <div class="container">
                     <h1 id="logo"><a href="/">logo</a></h1>
                     <nav id="gnb">
@@ -96,19 +99,111 @@
                     </div>
                 </div>
             </header>
+            <!-- SLIDER -->
+            <div class="swiper main-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <!-- desktop -->
+                            <source
+                                srcset="
+                                    https://images.unsplash.com/photo-1715428410595-c4d3072c68df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyNnxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8
+                                "
+                                media="(min-width: 1280px)"
+                            />
+                            <!-- mobile & tablet -->
+                            <source
+                                srcset="
+                                    https://images.unsplash.com/photo-1716467278688-5b7fc38e3ca7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU5fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D
+                                "
+                            />
 
-            <div class="slide-intro">slide</div>
+                            <img
+                                src="https://images.unsplash.com/photo-1716467278688-5b7fc38e3ca7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU5fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+                                alt=""
+                            />
+                        </picture>
+                        <div class="slide-text">
+                            <div class="container">
+                                <span>Lorem ipsum</span
+                                ><strong
+                                    >Lorem ipsum<br />
+                                    dolor sit amet</strong
+                                >
+                                <p>consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <img
+                                src="https://plus.unsplash.com/premium_photo-1693252886111-7b9f89b92903?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM0NHxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8"
+                                alt=""
+                            />
+                        </picture>
+                        <div class="slide-text">
+                            <div class="container">
+                                <span>Lorem ipsum</span
+                                ><strong
+                                    >Lorem ipsum<br />
+                                    dolor sit amet</strong
+                                >
+                                <p>consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <img
+                                src="https://images.unsplash.com/photo-1715436333174-8ab48faf7d81?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyNXxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8"
+                                alt=""
+                            />
+                        </picture>
+                        <div class="slide-text">
+                            <div class="container">
+                                <span>Lorem ipsum</span
+                                ><strong
+                                    >Lorem ipsum dolor<br />
+                                    sit amet</strong
+                                >
+                                <p>consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div class="swiper-pagination"></div>
+            </div>
             <!-- MAIN -->
             <main id="main">
-                <section class="sec-g sec-1">
+                <section class="sec-type1 sec-etf">
                     <!-- section 색깔 -->
                     <div class="container">
                         <!-- 컨테이너 그리드 -->
                         <h2 class="sec-title">섹션 타이틀</h2>
-                        <div class="sec-content">섹션 내용</div>
+                        <div class="sec-content">
+                            <div class="swiper slide-eft">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                    <div class="swiper-slide"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section class="sec-g sec-2 bg-grey">
+                <section class="sec-type2 sec-2 bg-grey">
                     <div class="container">
                         <h2 class="sec-title">섹션 타이틀</h2>
                         <div class="sec-content">섹션 내용</div>
