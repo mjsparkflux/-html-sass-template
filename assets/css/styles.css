@@ -123,7 +123,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: #222;
+  color: #202020;
 }
 
 /* desktop */
@@ -264,8 +264,105 @@ legend {
   content: "";
 }
 
+.container {
+  padding: 0 20px;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+    background-color: burlywood;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-color: cornflowerblue;
+  }
+}
+.bg-grey {
+  background-color: #f8f8f8;
+}
+
+.sec-g {
+  padding: 30px 0;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 #header {
+  background-color: bisque;
+}
+#header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#header #logo a {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+#gnb {
+  display: flex;
+}
+#gnb .label-menu .bar {
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: black;
+  border-radius: 3px;
+}
+#gnb .menu-wrap {
+  display: none;
+}
+#gnb .m-util {
+  display: none;
+}
+#gnb .depth1 {
+  display: flex;
+}
+#gnb .depth1 > li > a {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 0 40px;
+}
+#gnb .depth2 {
+  display: none;
+}
+
+.search-area .layer-search {
+  display: none;
+}
+
+.util {
+  display: none;
+}
+
+.lang {
+  display: flex;
+}
+.lang a {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 90px;
+}
+
+#main {
+  flex: 1;
+}
+
+#footer {
+  background-color: aquamarine;
+  padding: 20px 0;
 }/*# sourceMappingURL=styles.css.map */

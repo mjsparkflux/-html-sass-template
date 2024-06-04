@@ -1,9 +1,118 @@
+// M -> D
 //사이트의 공통 스타일을 정의합니다.
+
+//mobile
+.container {
+    // x축 그리드 정렬
+    padding: 0 20px;
+    transition: all 0.3s;
+}
+//tablet
+@media screen and (min-width: $breakpoint-md) {
+    .container {
+        padding: 0 30px;
+        background-color: burlywood;
+    }
+}
+//desktop
+@media screen and (min-width: $breakpoint-xl) {
+    .container {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 30px;
+        background-color: cornflowerblue;
+    }
+}
+.bg-grey {
+    background-color: #f8f8f8;
+}
+.sec-g {
+    // 섹션 위아래 패딩
+    padding: 30px 0;
+}
 
 //style(button, radio, checkbox, card, list
 
+#wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 //header
 #header {
-    @include flexSpaceBetween;
+    background-color: bisque;
+    .container {
+        @include flexSpaceBetween;
+    }
+    #logo {
+        a {
+            @include flexitems;
+            height: $hdH;
+        }
+    }
+}
+
+#gnb {
+    display: flex;
+
+    .label-menu {
+        .bar {
+            width: 24px;
+            height: 2px;
+            margin: 5px 0;
+            background-color: black;
+            border-radius: 3px;
+        }
+    }
+
+    .menu-wrap {
+        display: none;
+    }
+    .m-util {
+        display: none;
+    }
+    .depth1 {
+        display: flex;
+        > li {
+            // &::after{
+            // }
+            > a {
+                display: flex;
+                align-items: center;
+                height: 90px;
+                padding: 0 40px;
+            }
+        }
+    }
+    .depth2 {
+        display: none;
+    }
+}
+
+.search-area {
+    .layer-search {
+        display: none;
+    }
+}
+.util {
+    display: none;
+}
+.lang {
+    display: flex;
+    a {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 90px;
+    }
+}
+
+//main
+#main {
+    flex: 1;
 }
 //footer
+#footer {
+    background-color: aquamarine;
+    padding: 20px 0;
+}

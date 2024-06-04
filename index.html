@@ -16,25 +16,109 @@
         <title>template</title>
 
         <!-- css -->
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <!-- js -->
         <script defer src="./assets/js/comm.js"></script>
     </head>
     <body>
+        <!-- 접근성 -->
+        <div id="u-skip">
+            <a href="#gnb">전체메뉴 바로가기</a>
+            <a href="#main">본문바로가기</a>
+        </div>
         <div id="wrap">
+            <!-- HEADER -->
             <header id="header">
-                <h1 id="logo"><a href="/">logo</a></h1>
-                <nav id="'gnb">nav</nav>
-                <div class="util">util menu</div>
+                <div class="container">
+                    <h1 id="logo"><a href="/">logo</a></h1>
+                    <nav id="gnb">
+                        <!-- 접근성-시각장애인(전체보기 reset.scss에 .blind ) -->
+                        <input type="checkbox" name="btnMenu" id="btnMenu" class="blind" />
+                        <label for="btnMenu" class="label-menu">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <span class="blind">전체메뉴 보기</span>
+                        </label>
+                        <!-- menu-wrap>m-util은 모바일에 메뉴 위에 로고나 다른 로그인/회원가입 등 필요할 때 추가 -->
+                        <div class="menu-wrap">
+                            <div class="m-util">
+                                <a href="#">로그인</a>
+                                <a href="#">회원가입</a>
+                                <a href="#">공지사항</a>
+                            </div>
+                            <ul class="depth1">
+                                <li>
+                                    <a href="#">menu1</a>
+                                    <ul class="depth2">
+                                        <li><a href="#">서브메뉴1</a></li>
+                                        <li><a href="#">서브메뉴2</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">menu2</a>
+                                    <ul class="depth2">
+                                        <li><a href="#">서브메뉴1</a></li>
+                                        <li><a href="#">서브메뉴2</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">menu3</a>
+                                    <ul class="depth2">
+                                        <li><a href="#">서브메뉴1</a></li>
+                                        <li><a href="#">서브메뉴2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="util">
+                        <div class="lang">
+                            <a href="#">kor</a>
+                            <a href="#">eng</a>
+                        </div>
+                        <div class="search-area">
+                            <button class="btn-search">
+                                <span class="blind">검색창 열기</span>
+                            </button>
+                            <div class="layer-search">
+                                <form action="">
+                                    <input type="text" name="search" id="search" placeholder="검색어를 입력하세요" />
+                                    <button type="submit">검색</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
+
             <div class="slide-intro">slide</div>
+            <!-- MAIN -->
             <main id="main">
                 <section class="sec-g sec-1">
-                    <h2 class="sec-title">섹션 타이틀</h2>
-                    <div class="sec-content">섹션 내용</div>
+                    <!-- section 색깔 -->
+                    <div class="container">
+                        <!-- 컨테이너 그리드 -->
+                        <h2 class="sec-title">섹션 타이틀</h2>
+                        <div class="sec-content">섹션 내용</div>
+                    </div>
+                </section>
+                <section class="sec-g sec-2 bg-grey">
+                    <div class="container">
+                        <h2 class="sec-title">섹션 타이틀</h2>
+                        <div class="sec-content">섹션 내용</div>
+                    </div>
                 </section>
             </main>
-            <footer id="footer">footer</footer>
+            <!-- FOOTER -->
+            <footer id="footer">
+                <div class="container">footer</div>
+            </footer>
         </div>
     </body>
 </html>

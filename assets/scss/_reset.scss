@@ -134,7 +134,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
-    color: #222;
+    color: $txtDefault;
 }
 
 /* desktop */
@@ -177,6 +177,7 @@ input[type='password'] {
 
 /* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
 /* skipnavigation */
+// 메뉴바로가기, 본문바로가기
 
 #u-skip {
     position: relative;
