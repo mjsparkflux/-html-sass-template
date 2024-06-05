@@ -126,7 +126,7 @@
 }
 .slide-eft {
     overflow: visible;
-    width: 82%;
+    width: 80%;
     margin-left: 0;
     margin-right: 0;
     .swiper-slide {
@@ -134,10 +134,29 @@
         background: $primary;
         border-radius: 20px;
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include flexitems;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        transform: translateY(-50%);
+        &::after {
+            transform: scale(0.4);
+        }
+    }
+    .swiper-button-prev {
+        left: -20px;
+    }
+    .swiper-button-next {
+        right: -20px;
+    }
 }
 @media screen and (min-width: $breakpoint-md) {
     .slide-eft {
-        width: 95%;
+        width: 90%;
     }
 }
 @media screen and (min-width: $breakpoint-xl) {
