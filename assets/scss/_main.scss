@@ -51,6 +51,52 @@
     img {
         height: 100vh;
     }
+    //arrow 아래로 배치
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: auto;
+        bottom: 80px;
+        left: 50%;
+        &:hover {
+            &::before {
+                color: black;
+            }
+        }
+        &::before {
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            font-size: 3rem;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        // transform 나(1280px)를 기준으로 x축으로 당기기 위함
+        transform: translateX(-635px);
+        &::before {
+            content: '\f060';
+        }
+    }
+    .swiper-button-next {
+        transform: translateX(-570px);
+        &::before {
+            content: '\f061';
+        }
+    }
+    // pagination
+    .swiper-pagination {
+        width: 70px;
+        top: auto;
+        left: 50%;
+        bottom: 76px;
+        transform: translateX(-500px);
+        color: $white;
+        span {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
 }
 @media screen and (min-width: $breakpoint-xl) {
     .main-slide {
@@ -73,17 +119,18 @@
         }
     }
 }
-//main
+
+//main section
 .sec-etf {
     overflow: hidden;
 }
 .slide-eft {
     overflow: visible;
-    width: 80%;
+    width: 82%;
     margin-left: 0;
     margin-right: 0;
     .swiper-slide {
-        height: 500px;
+        height: 400px;
         background: $primary;
         border-radius: 20px;
     }
@@ -91,5 +138,10 @@
 @media screen and (min-width: $breakpoint-md) {
     .slide-eft {
         width: 95%;
+    }
+}
+@media screen and (min-width: $breakpoint-xl) {
+    .slide-eft {
+        width: 100%;
     }
 }

@@ -265,7 +265,7 @@ legend {
 }
 
 :root {
-  --swiper-theme-color: #36c5f4;
+  --swiper-theme-color: #ffffff;
 }
 
 .container {
@@ -475,6 +475,50 @@ legend {
 .main-slide img {
   height: 100vh;
 }
+.main-slide .swiper-button-prev,
+.main-slide .swiper-button-next {
+  top: auto;
+  bottom: 80px;
+  left: 50%;
+}
+.main-slide .swiper-button-prev:hover::before,
+.main-slide .swiper-button-next:hover::before {
+  color: black;
+}
+.main-slide .swiper-button-prev::before,
+.main-slide .swiper-button-next::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3rem;
+}
+.main-slide .swiper-button-prev::after,
+.main-slide .swiper-button-next::after {
+  display: none;
+}
+.main-slide .swiper-button-prev {
+  transform: translateX(-635px);
+}
+.main-slide .swiper-button-prev::before {
+  content: "\f060";
+}
+.main-slide .swiper-button-next {
+  transform: translateX(-570px);
+}
+.main-slide .swiper-button-next::before {
+  content: "\f061";
+}
+.main-slide .swiper-pagination {
+  width: 70px;
+  top: auto;
+  left: 50%;
+  bottom: 76px;
+  transform: translateX(-500px);
+  color: #fff;
+}
+.main-slide .swiper-pagination span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 
 @media screen and (min-width: 1280px) {
   .main-slide .slide-text {
@@ -501,12 +545,12 @@ legend {
 
 .slide-eft {
   overflow: visible;
-  width: 80%;
+  width: 82%;
   margin-left: 0;
   margin-right: 0;
 }
 .slide-eft .swiper-slide {
-  height: 500px;
+  height: 400px;
   background: #36c5f4;
   border-radius: 20px;
 }
@@ -514,5 +558,10 @@ legend {
 @media screen and (min-width: 768px) {
   .slide-eft {
     width: 95%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slide-eft {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

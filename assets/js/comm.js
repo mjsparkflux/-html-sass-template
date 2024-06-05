@@ -4,12 +4,12 @@ var swiper = new Swiper('.main-slide', {
     centeredSlides: true,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 30000,
         disableOnInteraction: false,
     },
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        type: 'fraction',
     },
     navigation: {
         nextEl: '.swiper-button-next',
@@ -32,15 +32,15 @@ var swiper = new Swiper('.slide-eft', {
         // },
         768: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 24,
         },
         // 1024: {
         //     slidesPerView: 5,
         //     spaceBetween: 50,
         // },
         1280: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 24,
         },
     },
 })
