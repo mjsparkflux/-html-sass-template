@@ -131,7 +131,6 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-top: 20px;
 
         dl {
             display: flex;
@@ -192,7 +191,9 @@
 }
 @media screen and (min-width: $breakpoint-xl) {
     #gnb {
-        .label-menu {
+        #btnMenu,
+        .label-menu,
+        .m-util {
             display: none;
         }
         .m-util {
@@ -210,11 +211,24 @@
             flex-direction: row;
             dl {
                 position: relative;
-                padding: 0 40px;
+                padding: 0;
                 background: transparent;
-                &:hover dd {
-                    max-height: 300px;
-                    padding: 10px 0;
+                &:hover,
+                &:focus-within {
+                    dt {
+                        a {
+                            text-decoration: none;
+                            color: #117ce9;
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    dd {
+                        height: auto;
+                        max-height: 300px;
+                        padding: 10px 0;
+                    }
                 }
 
                 dt {
@@ -222,7 +236,19 @@
                     font-weight: 400;
                     a {
                         @include flexitems;
+                        padding: 0 40px;
                         height: $hdH-xl;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: all 0.3s;
+                            width: 0;
+                            height: 3px;
+                            background: #117ce9;
+                        }
                         &::after {
                             display: none;
                         }
@@ -231,7 +257,7 @@
                 dd {
                     // display: none;
                     position: absolute;
-                    top: $hdH-xl;
+                    top: 85px;
                     left: 0;
                     background: $white;
                     width: 100%;
