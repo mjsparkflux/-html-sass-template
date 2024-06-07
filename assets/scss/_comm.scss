@@ -35,8 +35,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    z-index: 9999;
     background: rgba($black, 0.3);
     backdrop-filter: blur(30px);
 }
@@ -73,7 +74,7 @@
 }
 @media screen and (min-width: $breakpoint-xl) {
     #header {
-        position: static;
+        position: relative;
     }
 }
 #gnb {
@@ -318,60 +319,121 @@
         }
     }
 }
+// .search-area {
+//     position: relative;
+//     .btn-search {
+//         @include flexitems;
+//         padding: 0 10px;
+//         height: $hdH-xl;
+//         i {
+//             font-size: 1.5rem;
+//             transform: scaleX(-1);
+//         }
+//     }
+//     .layer-search {
+//         // display: none;
+//     }
+//     .search-box {
+//         position: relative;
+//         @include flexCenter;
+//         height: 300px;
+//         background: $white;
+//         .form-search {
+//             display: flex;
+//             align-items: center;
+//             gap: 20px;
+//             border: 2px solid $primary;
+//             border-radius: 40px;
+//             padding: 0 10px 0 30px;
+//         }
+//         .inp-search {
+//             width: 600px;
+//             padding: 20px 0;
+//             border: none;
+//             background-color: transparent;
+//             &:focus {
+//                 outline: none;
+//             }
+//         }
+//         .btn-submit {
+//             width: 40px;
+//             height: 40px;
+//             border-radius: 50%;
+//             background: $primary;
+//             color: $white;
+//             transform: scaleX(-1);
+//             font-size: 1.2rem;
+//         }
+//         .btn-close {
+//             @include flexCenter;
+//             position: absolute;
+//             top: 0;
+//             right: 0;
+//             width: 70px;
+//             height: 70px;
+//             i {
+//                 font-size: 2.5rem;
+//             }
+//         }
+//     }
+// }
 .search-area {
-    @include flexCenter;
     .btn-search {
+        // display: none;
         @include flexitems;
-        padding: 0 10px;
         height: $hdH-xl;
+        padding: 0 10px;
         i {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             transform: scaleX(-1);
         }
     }
     .layer-search {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: $white;
-        height: 300px;
-        width: 100%;
-        z-index: 3000;
+        // display: none;
     }
     .search-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        @include flexCenter;
         height: 300px;
-    }
-    .form-search {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        border: 2px solid $primary;
-        border-radius: 40px;
-        padding: 3px 20px;
-    }
-    .inp-search {
-        width: 600px;
-        border: none;
-        padding: 20px 0;
-
-        &:focus {
-            outline: none;
+        background: $white;
+        .form-search {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 10px 0 30px;
+            border: 2px solid $primary;
+            border-radius: 62px;
         }
-    }
-    .btn-submit {
-        border-radius: 50%;
-        background: $primary;
-        width: 40px;
-        height: 40px;
-
-        i {
-            font-size: 1.2rem;
-            transform: scaleX(-1);
+        .inp-search {
+            width: 600px;
+            padding: 20px 0;
+            border: none;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+        }
+        .btn-submit {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: $primary;
             color: $white;
+            transform: scaleX(-1);
+            font-size: 1.2rem;
+        }
+        .btn-close {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include flexCenter;
+            width: 70px;
+            height: 70px;
+            background: $primary;
+            i {
+                color: $white;
+                font-size: 2rem;
+            }
         }
     }
 }
