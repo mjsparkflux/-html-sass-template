@@ -523,9 +523,28 @@ legend {
 }
 .lang a {
   display: flex;
+  position: relative;
   align-items: center;
   padding: 0 20px;
-  height: 90px;
+  height: 80px;
+  color: rgba(32, 32, 32, 0.7);
+}
+.lang a.active {
+  color: #202020;
+  font-weight: 700;
+}
+.lang a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 16px;
+  background: #9e9e9e;
+}
+.lang a:first-child::before {
+  display: none;
 }
 
 #main {

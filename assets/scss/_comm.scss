@@ -287,11 +287,31 @@
 }
 .lang {
     display: flex;
+
     a {
         display: flex;
+        position: relative;
         align-items: center;
         padding: 0 20px;
-        height: 90px;
+        height: $hdH-xl;
+        color: $blurTxt;
+        &.active {
+            color: $txtDefault;
+            font-weight: 700;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 16px;
+            background: $gray-500;
+        }
+        &:first-child::before {
+            display: none;
+        }
     }
 }
 
