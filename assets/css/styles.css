@@ -350,6 +350,7 @@ legend {
   transform: translateY(9px);
 }
 #gnb .label-menu .bar {
+  display: block;
   width: 24px;
   height: 2px;
   margin: 5px 0;
