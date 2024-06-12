@@ -317,7 +317,6 @@ legend {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: transparent;
 }
 #header.active {
   background: rgba(241, 243, 248, 0.5);
@@ -337,8 +336,11 @@ legend {
 }
 
 @media screen and (min-width: 1280px) {
-  #header {
-    position: relative;
+  #header.bg-w * {
+    color: #000;
+  }
+  #header * {
+    color: #fff;
   }
 }
 #gnb {
@@ -557,6 +559,7 @@ legend {
 }
 
 .search-area .btn-search {
+  display: none;
   display: flex;
   align-items: center;
   height: 80px;
@@ -565,6 +568,9 @@ legend {
 .search-area .btn-search i {
   font-size: 1.7rem;
   transform: scaleX(-1);
+}
+.search-area .layer-search {
+  display: none;
 }
 .search-area .search-box {
   position: relative;
